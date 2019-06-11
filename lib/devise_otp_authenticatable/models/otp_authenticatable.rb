@@ -129,8 +129,8 @@ module Devise::Models
     end
 
     def generate_otp_auth_secret
-      self.otp_auth_secret = ROTP::Base32.random_base32
-      self.otp_recovery_secret = ROTP::Base32.random_base32
+      self.otp_auth_secret = ROTP::Base32.random
+      self.otp_recovery_secret = ROTP::Base32.random
     end
 
   end
